@@ -1,4 +1,4 @@
-curl http://narmada.merai.cloud:8000/v1/chat/completions \
+curl http://narmada.merai.cloud:8001/v1/chat/completions \
   -H "Content-Type: application/json" \
   -d '{
     "model": "meta-llama/Llama-2-7b-chat-hf",
