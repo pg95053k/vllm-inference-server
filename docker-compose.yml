@@ -4,7 +4,7 @@ services:
   vllm:
     build: .
     ports:
-      - "8000:8000"
+      - "8001:8001"
     environment:
       - NVIDIA_VISIBLE_DEVICES=1
     deploy:
@@ -12,7 +12,6 @@ services:
         reservations:
           devices:
             - driver: nvidia
-              count: 1
               device_ids: ["1"]
               capabilities: [gpu]
     restart: always
