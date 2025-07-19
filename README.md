@@ -12,7 +12,7 @@ docker pull vllm/vllm-openai:latest
 
 ---
 
-## 🐳 Deploy with Docker on Linux:
+## 🐳 Deploy with Docker on Linux
 
 ```bash
 nohup docker run --runtime=nvidia \
@@ -35,7 +35,7 @@ nohup docker run --runtime=nvidia \
 
 ---
 
-## 🧪 Step 3: Call the server using `curl`
+## 🧪 Call the server using `curl`
 
 ```bash
 curl http://<username>:8010/v1/chat/completions \
