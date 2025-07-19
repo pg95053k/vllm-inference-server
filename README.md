@@ -38,7 +38,7 @@ nohup docker run --runtime=nvidia \
 ## 🧪 Step 3: Call the server using `curl`
 
 ```bash
-curl http://narmada.merai.cloud:8010/v1/chat/completions \
+curl http://<username>:8010/v1/chat/completions \
   -X POST -H "Content-Type: application/json" \
   -d '{
     "model": "neuralmagic/DeepSeek-R1-Distill-Llama-70B-quantized.w8a8",
