@@ -20,7 +20,7 @@ nohup docker run --runtime=nvidia \
   --name deepseek_int8_tp2 \
   -v ~/.cache/huggingface:/root/.cache/huggingface \
   --env "HUGGING_FACE_HUB_TOKEN=<secret>" \
-  -p 8010:8000 \
+  -p <port>:8000 \
   --ipc=host \
   vllm/vllm-openai:latest \
   --model neuralmagic/DeepSeek-R1-Distill-Llama-70B-quantized.w8a8 \
@@ -38,7 +38,7 @@ nohup docker run --runtime=nvidia \
 ## 🧪 Call the server using `curl`
 
 ```bash
-curl http://<username>:8010/v1/chat/completions \
+curl http://<username>:<port>/v1/chat/completions \
   -X POST -H "Content-Type: application/json" \
   -d '{
     "model": "neuralmagic/DeepSeek-R1-Distill-Llama-70B-quantized.w8a8",
@@ -57,7 +57,7 @@ from langchain_openai import ChatOpenAI
 llm = ChatOpenAI(
     model="neuralmagic/DeepSeek-R1-Distill-Llama-70B-quantized.w8a8",
     openai_api_key="EMPTY",
-    openai_api_base="http://<username>:8010/v1",
+    openai_api_base="http://<username>:<port>/v1",
     temperature=0
 )
 ```
