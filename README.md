@@ -50,6 +50,20 @@ curl http://<username>:8010/v1/chat/completions \
 
 ---
 
+## 🛠️ Use with ChatOpenAI from LangChain
+
+```python
+from langchain_openai import ChatOpenAI
+llm = return ChatOpenAI(
+    model="neuralmagic/DeepSeek-R1-Distill-Llama-70B-quantized.w8a8",
+    openai_api_key="EMPTY",
+    openai_api_base="http://narmada.merai.cloud:8010/v1",
+    temperature=0,
+)
+```
+
+---
+
 ## 📂 Logs
 
 Logs are written to `deepseek.log`:
